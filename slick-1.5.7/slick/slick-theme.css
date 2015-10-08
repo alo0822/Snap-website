@@ -15,6 +15,19 @@
     src: url('./fonts/slick.eot');
     src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
 }
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+       url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+       url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
 /* Arrows */
 .slick-prev,
 .slick-next
@@ -23,12 +36,12 @@
     line-height: 0;
 
     position: absolute;
-    top: 50%;
+    top: 45%;
 
     display: block;
 
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     margin-top: -10px;
     padding: 0;
 
@@ -64,8 +77,9 @@
 .slick-prev:before,
 .slick-next:before
 {
-    font-family: 'slick';
-    font-size: 40px;
+    /*font-family: 'slick';*/
+    font-family: 'Material Icons';
+    font-size: 50px;
     line-height: 1;
 
     opacity: 1;
@@ -86,29 +100,29 @@
 }
 .slick-prev:before
 {
-    content: '←';
+    content: '\e314';
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: '→';
+    content: '\e315';
 }
 
 .slick-next
 {
-    right: -35px;
+    right: -55px;
 }
 [dir='rtl'] .slick-next
 {
     right: auto;
-    left: -35px;
+    left: -55px;
 }
 .slick-next:before
 {
-    content: '→';
+    content: '\e315';
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '←';
+    content: '\e314';
 }
 
 /* Dots */
@@ -120,7 +134,7 @@
 .slick-dots
 {
     position: absolute;
-    bottom: -45px;
+    bottom: -55px;
 
     display: block;
 
@@ -175,7 +189,7 @@
 .slick-dots li button:before
 {
     font-family: 'slick';
-    font-size: 6px;
+    font-size: 10px;
     line-height: 20px;
 
     position: absolute;
@@ -188,14 +202,16 @@
     content: '•';
     text-align: center;
 
-    opacity: .25;
-    color: black;
+    /*opacity: .25;*/
+    /*color: #4a6bd6;*/
+    color: transparent;
+    -webkit-text-stroke: 1.2px #4a6bd6;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 .slick-dots li.slick-active button:before
 {
-    opacity: .75;
-    color: black;
+    opacity: 1;
+    color: #4a6bd6;
 }
